@@ -1,0 +1,14 @@
+name: Android Build
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+jobs:
+  android_build:
+    uses: supportingami/programming-club-builder/.github/workflows/android-build.yml@main
+    with:
+      dist-path: app
+      icon-path: queen.png
+      app-name: Queen Test
+      app-id: queen.test.app
